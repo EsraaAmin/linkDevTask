@@ -30,8 +30,9 @@
 
                     <div class="col-lg-2 col-md-4 col-6 mb-4 ml-auto mr-auto">
                         <label for="" class="regular">Category</label>
-                        <select name="" id="" class="form-control regular">
-                            <option value="">select</option>
+                        <select name="" id="" class="form-control regular" (change)="selectCategory($event)">
+                            <option value="0" selected disabled>select Category</option>
+                            <option [value]="source.id" *ngFor="let source of sourceCategory">{{source.name}}</option>
                         </select>
 
                     </div>

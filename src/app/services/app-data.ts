@@ -1,5 +1,27 @@
 export const AppData = {
+    "sourceCategory": [{
+        "id": 1,
+        "name": "TechCrunch"
+    },
+    {
+        "id": 2,
+        "name": "Yahoo Entertainment"
+    },
+    {
+        "id": 3,
+        "name": "autoevolution"
+    },
+    {
+        "id": 4,
+        "name": "MarketWatch"
+    },
+    {
+        "id": 5,
+        "name": "The Wall Street Journal"
+    }
+    ],
     
+
     "articles": [
         {
             "sourceID": 1,
