@@ -26,8 +26,6 @@ export class ListArticlesComponent implements OnInit {
       this.allArticles = AppData.articles;
     }    
     this.selectedCategoryId = param.target.value;
-    console.log(this.selectedCategoryId);
-
     this.allArticles = this.allArticles.filter(el => el.sourceID == this.selectedCategoryId)
   }
 
