@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
 import { AppData } from 'src/app/services/app-data';
 
 
@@ -16,7 +14,7 @@ export class ListArticlesComponent implements OnInit {
   public sourceCategory = AppData.sourceCategory;
   public selectedCategoryId: any;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor() { }
 
 
   ngOnInit() {
@@ -24,7 +22,7 @@ export class ListArticlesComponent implements OnInit {
   }
   selectCategory(param) {
     this.allArticles = AppData.articles;
-    if (this.selectedCategoryId == 0) {
+    if (this.selectedCategoryId === 0) {
       this.allArticles = AppData.articles;
     }    
     this.selectedCategoryId = param.target.value;

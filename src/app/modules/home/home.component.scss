@@ -25,6 +25,10 @@
             background: var(--green-color);
             color: #fff;
             width: 120px;
+
+            @media(max-width: 375px) {
+                font-size: 13px;
+            }
         }
     }
 
@@ -52,7 +56,13 @@
     }
 
 }
-
+.news {
+    h2 {
+        @media(max-width: 375px) {
+            font-size: 1.5rem;
+        }
+    }
+}
 .banner {
     position: relative;
 

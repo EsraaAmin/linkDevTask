@@ -54,7 +54,7 @@
                 </form>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-12 mb-3" *ngFor="let article of allArticles |filter:term">
+            <div class="col-lg-4 col-md-6 col-12 mb-3" *ngFor="let article of allArticles |filter:term ">
                 <div class="card">
                     <a routerLink="/article-details"  [queryParams]="{article_id: article['id']}">
                         <div class="img-holder">

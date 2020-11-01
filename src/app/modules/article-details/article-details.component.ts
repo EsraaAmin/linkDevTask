@@ -14,6 +14,8 @@ export class ArticleDetailsComponent implements OnInit {
   articles: Array<object> = AppData['articles'];
   article: any;
 
+
+
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
