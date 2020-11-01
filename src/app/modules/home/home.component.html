@@ -1,0 +1,203 @@
+<div class="swiper-container" [swiper]="homeSliderConfig">
+    <div class="overlay d-flex align-items-center">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="semiBold text-white mb-4">Al Foundation</h1>
+                    <h4 class="regular text-white w-75 ml-auto mr-auto mb-5">is focused on inspiring the next generation
+                        of kids
+                        Healthcare professionals.</h4>
+                    <button class="btn donate regular">Donate Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+            <img src="assets/images/main-slider-2.PNG" class="img-fluid offers-img">
+        </div>
+
+        <div class="swiper-slide">
+            <img src="assets/images/main-slider-2.PNG" class="img-fluid offers-img">
+        </div>
+
+        <div class="swiper-slide">
+            <img src="assets/images/main-slider-2.PNG" class="img-fluid offers-img">
+        </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<div class="container news mt-4">
+    <div class="row">
+        <div class="col-9">
+            <h2 class="semiBold section-title mb-3">latest news</h2>
+        </div>
+        <div class="col-3 text-right d-flex align-items-center justify-content-end">
+            <a routerLink="/list-articles">
+                <p class="semiBold section-title view-more mb-0">view all <img src="assets/images/view-more.svg"
+                        alt="view-more" class="ml-2"></p>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-12 mb-3" *ngFor="let article of articles | slice:0:6">
+            <div class="card">
+                <a routerLink="/article-details" [queryParams]="{article_id: article['id']}">
+                    <div class="img-holder">
+                        <img class="card-img-top" [src]="article.urlToImage" alt="Article image">
+                    </div>
+                </a>                <div class="card-body p-3">
+                    <div class="text-right share-icons mb-2">
+                        <span class="mr-3">
+                            <img src="assets/images/ic_favorite_border_24px.svg" alt="fav">
+                        </span>
+                        <span>
+
+                            <img src="assets/images/ic_share_24px.svg" alt="share">
+                        </span>
+                    </div>
+                    <h5 class="card-title OpenSans-Semibold">{{article.title}}
+                    </h5>
+
+                    <div class="mb-2">
+                        <span class="badge badge-secondary text-dark regular mr-3">News</span>
+                        <span class="badge badge-secondary text-dark regular">Products</span>
+                    </div>
+                    <p class="card-text regular mb-4">{{article.content}}</p>
+
+                    <div class="calender">
+                        <img src="assets/images/ic_date_range_24px.svg" alt="date" class="mr-3">
+                        <span class="bold">{{article.publishedAt}}</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="banner w-100 mt-4">
+    <img src="assets/images/banner.png" alt="banner" class="w-100 h-100 main-banner">
+    <div class="overlay d-flex align-items-center">
+        <div class="container text-center text-white">
+
+            <div class="row m-auto">
+                <div class="col-12 mb-4 banner-title">
+                    <h2 class="semiBold">How we have helped</h2>
+                    <h4 class="regular mb-5">See how Al Foundation have promoted change locally and to the world
+                    </h4>
+                </div>
+                <div class="col-md-3 col-6 m-auto">
+                    <div class="banner-item m-auto text-center">
+                        <div class="banner-content">
+                            <div>
+                                <img src="assets/images/pin.svg" alt="pin" class="service-img">
+                            </div>
+                            <p class="semiBold mt-3">Find place</p>
+
+                            <div>
+                                <img src="assets/images/+.svg" alt="add" class="add-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 m-auto">
+                    <div class="banner-item m-auto text-center">
+                        <div class="banner-content">
+                            <div>
+
+                                <img src="assets/images/Show-Hide password.svg" alt="pin" class="service-img">
+                            </div>
+                            <p class="semiBold mt-3">A’awen</p>
+
+                            <div>
+                                <img src="assets/images/+.svg" alt="add" class="add-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 m-auto">
+                    <div class="banner-item m-auto text-center">
+                        <div class="banner-content">
+                            <div>
+                                <img src="assets/images/info.svg" alt="info" class="service-img">
+                            </div>
+                            <p class="semiBold mt-3">Give Time</p>
+
+                            <div>
+                                <img src="assets/images/+.svg" alt="add" class="add-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 m-auto">
+                    <div class="banner-item m-auto text-center">
+                        <div class="banner-content">
+                            <div>
+                                <img src="assets/images/surface1.svg" alt="pin" class="service-img">
+                            </div>
+                            <p class="semiBold mt-3">Tofoula</p>
+
+                            <div>
+                                <img src="assets/images/+.svg" alt="add" class="add-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6 m-auto">
+                    <div class="banner-item float-right">
+                        <div class="banner-content">
+                            <div>
+                                <img src="assets/images/arrow.svg" alt="arrow" class="service-img">
+                            </div>
+                            <p class="semiBold mt-3">Fundraising</p>
+
+                            <div>
+                                <img src="assets/images/+.svg" alt="add" class="add-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-6 m-auto">
+                    <div class="banner-item m-auto text-center">
+                        <div class="banner-content">
+                            <div>
+                                <img src="assets/images/service.svg" alt="service" class="service-img">
+                            </div>
+                            <p class="semiBold mt-3">Zakat</p>
+
+                            <div>
+                                <img src="assets/images/+.svg" alt="add" class="add-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-6">
+                    <div class="banner-item">
+                        <div class="banner-content">
+                            <div>
+                                <img src="assets/images/noun_services_2097593.svg" alt="pin" class="service-img">
+                            </div>
+                            <p class="semiBold mt-3">Omniyat</p>
+
+                            <div>
+                                <img src="assets/images/+.svg" alt="add" class="add-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

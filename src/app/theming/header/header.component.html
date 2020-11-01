@@ -1,0 +1,170 @@
+<div class="w-100 nav-holder">
+
+
+    <nav class="navbar navbar-expand-lg navbar-light container">
+        <span id="nav-icon" class="mr-5" (click)="show_menu_event()" [ngClass]="status ? 'open' : ''">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+
+
+        <div class="main-menu" *ngIf="show_menu">
+            <div class="container-fluid">
+                <div class="row w-100 h-100">
+                    <div class="col-4  align-items-end social-media">
+                        <div class="social-icons">
+                            <div class="mb-4">
+                                <a href="">
+                                    <img src="assets/images/white-twitter.svg" alt="twitter">
+                                </a>
+                            </div>
+                            <div class="mb-4">
+                                <a href="">
+                                    <img src="assets/images/white-facebook.svg" alt="facebook">
+                                </a>
+                            </div>
+                            <div class="mb-4">
+                                <a href="">
+                                    <img src="assets/images/white-linkedin.svg" alt="linkedin">
+                                </a>
+                            </div>
+
+                            <div class="mb-4">
+                                <a href="">
+                                    <img src="assets/images/white-youtube.svg" alt="youtube">
+                                </a>
+                            </div>
+
+                            <div class="mb-4">
+                                <a href="">
+                                    <img src="assets/images/white-insta.svg" alt="instagram">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <ul class="pt-3 pl-0">
+                            <li class="mb-4">
+                                <a routerLink="/">
+                                    <h3 class="semiBold">
+                                        Home
+                                    </h3>
+                                </a>
+
+                            </li>
+                            <li class="mb-4">
+                                <a href="">
+                                    <h3 class="semiBold">
+                                        About us
+                                    </h3>
+                                </a>
+                                <a href="">
+                                    <p class="mb-2 light-text regular">who are us</p>
+                                </a>
+                                <a href="">
+                                    <p class="mb-2 light-text regular">Why us?</p>
+                                </a>
+                            </li>
+
+                            <li class="mb-4">
+                                <a routerLink="/list-articles">
+                                    <h3 class="semiBold">
+                                        News
+                                    </h3>
+                                </a>
+                                <a routerLink="/list-articles">
+                                    <p class="mb-2 light-text regular">News</p>
+                                </a>
+                                <a href="">
+                                    <p class="mb-2 light-text regular">Events</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <h3 class="semiBold">
+                                        Careers
+                                    </h3>
+                                </a>
+                                <a href="">
+                                    <p class="mb-2 light-text regular">Opportunities</p>
+                                </a>
+                            </li>
+
+                            <li class="mb-4 contact-us">
+                                <a href="">
+                                    <h3 class="semiBold">
+                                        Contact Us
+                                    </h3>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <h3 class="semiBold">
+                                        Site Map
+                                    </h3>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <span>
+            <a routerLink="/">
+                <img src="assets/images/logo.png" alt="logo">
+            </a>
+        </span> -->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <form class="form-inline ml-auto">
+                <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <button class="btn  my-2 my-sm-0" type="submit"><img src="assets/images/ic_search_24px.svg"
+                        alt="search"></button>
+            </form>
+
+            <div class="notifications ml-3 p-2">
+                <span (click)="show_notifications=!show_notifications">
+                    <img src="assets/images/notification (1).svg" alt="notification">
+                </span>
+
+                <div class="notification-holder p-2" *ngIf="show_notifications">
+                    <p class="mb-1 title regular">Recent Notifications</p>
+                    <ul class="p-0 mb-0 list-noti">
+                        <a href="" class="text-dark">
+                            <li class="notify regular pb-2 pt-2">You have an upcoming appoientment today! <span
+                                    class="more">Check-in Now</span></li>
+
+                        </a>
+                        <a href="" class="text-dark">
+                            <li class="notify regular pb-2 pt-2">Rate Your latest service appoientment</li>
+
+                        </a>
+                        <a href="" class="text-dark">
+                            <li class="notify regular pb-2 pt-2">Your payment request has been approved</li>
+
+                        </a>
+                    </ul>
+                    <p class="text-center pt-3 "><a href="" class="all">
+                            All Notifications <img src="assets/images/view-more.svg" alt="">
+                        </a></p>
+                </div>
+            </div>
+
+            <div class="profile-pic ml-4">
+                <img src="assets/images/profile-pic.png" alt="profile-pic" class="mr-2">
+                <span class="regular text-white">User Name</span>
+            </div>
+
+            <div class="settings ml-4 p-2">
+                <img src="assets/images/settings.svg" alt="settings">
+            </div>
+        </div>
+    </nav>
+</div>
